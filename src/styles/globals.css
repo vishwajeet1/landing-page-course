@@ -2,20 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.enquire-button {
+    background: linear-gradient(263.28deg, #FF6A56 1.1%, #FDAF4D 141.83%);
+    box-shadow: 0px 8px 30px rgba(10, 2, 23, 0.2);
+    border-radius: 8px;
+    padding: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+.button__bar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto;
+    padding: 0;
+    text-align: center;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.button__bar li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 40px;
+    padding: 0;
 }
+
+.button__bar li button {
+    border: none;
+    background: #0E1B2C;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 7.5px;
+    opacity: 0.5;
+}
+
+.button__bar li.slick-active button {
+    opacity: 1;
+    height: 12px;
+    width: 12px;
+}
+
+.button__bar li button:hover,
+.button__bar li button:focus {
+    background: rgba(247, 34, 34, 0.8);
+    outline: 0;
+}
+
+
+.custom__slider .slick-current {
+    padding-top: 60px;
+}
+
+.custom__slider .slick-track {
+    margin: auto;
+}
+
+.input,
+.drop-down {
+    border: 1px solid #D0D0D0;
+    padding: 15px 15px;
+    border-radius: 5px;
+    outline: none;
+    color: #64647A;
+    font-weight: 300;
+    width: 300px;
+}
+
+.drop-down {
+    border-right: 10px solid #fff;
+}
+
+@media (min-width: 768px) {
+    .pune_highlight {
+        position: relative;
+        z-index: 10;
+    }
+
+    .pune_highlight:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        transform: translateX(-20%);
+        bottom: 0;
+        width: 150%;
+        height: 20px;
+        background: #805EFF;
+        z-index: -1;
+    }
+}
+
