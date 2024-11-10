@@ -38,7 +38,7 @@ const ServiceProvider = ({}) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-10">
         {serviceData.map((item, index) => (
           <div
-            className="flex justify-start items-center gap-2 shadow-[0px_8px_25px_rgba(0,0,0,0.1)] rounded-[10px] px-5 py-6 md:px-8 md:py-6 text-[#0E1B2C] md:text-[18px] md:font-semibold"
+            className="text-left flex justify-start items-center gap-2 shadow-[0px_8px_25px_rgba(0,0,0,0.1)] rounded-[10px] px-5 py-6 md:px-8 md:py-6 text-[#0E1B2C] md:text-[18px] md:font-semibold"
             key={item.id}
           >
             <Image src={item.icon} alt={item.text} width={20} height={20} />{" "}

@@ -1,6 +1,5 @@
 import EnquireButton from "@/components/common/Button/EnquireButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Image from "next/image";
 
 const HeroLayout = () => {
   return (
@@ -23,7 +22,7 @@ const HeroLayout = () => {
           <EnquireButton>
             <div className="px-4">Enquire Now</div>
           </EnquireButton>
-          <div className="flex justify-center items-center gap-2">
+          <div className="flex justify-center items-center gap-2 cursor-pointer transition ease-in-out delay-150  hover:animate-bounce">
             <div className="relative bg-white p-5 rounded-full">
               <div className="absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%] text-[#0E1B2C]">
                 <KeyboardArrowDownIcon />
@@ -36,7 +35,7 @@ const HeroLayout = () => {
           src={"/assets/hero/Ellipse 589.svg"}
           width={6}
           height={6}
-          className="absolute top-[10%] left-[60%] hidden md:block"
+          className="absolute top-[10%] left-[60%] hidden md:block animate-spin"
           alt="icon"
         />
         <img
@@ -57,25 +56,29 @@ const HeroLayout = () => {
           src={"/assets/hero/Star 1.svg"}
           width={20}
           height={20}
-          className="absolute top-[40%] left-[10%] hidden md:block"
+          className="absolute top-[40%] left-[10%] hidden md:block animate-spin-slow"
           alt="icon"
         />
         <img
           src={"/assets/hero/Star 1.svg"}
           width={18}
           height={18}
-          className="absolute top-[30%] left-[90%] hidden md:block"
+          className="absolute top-[30%] left-[90%] hidden md:block animate-spin-slow"
           alt="icon"
         />
         <img
           src={"/assets/hero/Star 4.svg"}
           width={18}
           height={18}
-          className="absolute top-[90%] left-[90%] hidden md:block"
+          className="absolute top-[90%] left-[90%] hidden md:block animate-spin"
           alt="icon"
         />
       </div>
-      <div className="absolute bottom-[-50px] h-[110px] md:bottom-[-70px] w-full md:h-[150px] rounded-b-[50%] bg-[#6C48F0] z-[-1]" />
+      <img
+        src="/assets/hero/Rectangle 1745 (1).png"
+        className="absolute bottom-[-50px] h-[110px] md:bottom-[-60px] w-full md:h-[150px] z-[-1]"
+      />
+      {/*<div className="absolute bottom-[-50px] h-[110px] md:bottom-[-70px] w-full md:h-[150px] rounded-b-[50%] bg-[#6C48F0] z-[-1]" />*/}
     </div>
   );
 };

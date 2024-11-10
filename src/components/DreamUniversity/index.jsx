@@ -21,7 +21,7 @@ const DreamUniversity = () => {
         <div className="font-semibold text-[26px] md:text-[42px]">
           7 Easy Steps to Land in your Dream University
         </div>
-        <div className="flex justify-start md:justify-center items-start gap-10 md:gap-20 pt-32 md:pt-52 overflow-x-auto relative">
+        <div className="flex justify-start md:justify-end 2xl:justify-center items-start gap-10 md:gap-20 pt-32 md:pt-52 overflow-x-auto md:overflow-hidden relative">
           {data.map((items) => (
             <div className="shadow-[0px_6px_50px_0px_#0000001A] bg-white rounded-[10px] min-w-[274px] md:min-w-[440px] min-h-[209px] md:min-h-[260px] flex flex-col justify-center items-center text-[#0E1B2C] relative">
               <img
@@ -50,10 +50,10 @@ const DreamUniversity = () => {
               <div className="absolute top-[-70px] left-[calc(100%+38px)] translate-x-[-50%] translate-y-[-50%] transform w-full border-b border-[#64647A]/[.5] h-[1px] border-dashed" />
             </div>
           ))}
-          <div className="bg-[linear-gradient(270deg,#DBD9FF_46.66%,rgba(219,217,255,0)_96.77%)] h-full absolute right-0 w-[40%] top-0 z-20 hidden md:block" />
+          <div className="bg-[linear-gradient(270deg,#DBD9FF_46.66%,rgba(219,217,255,0)_96.77%)] h-full absolute right-0 w-[20%] top-0 z-20 hidden md:block" />
         </div>
       </div>
-      <div className="flex justify-center items-center gap-8 pt-10 text-[#FF7361] font-semibold">
+      <div className="flex justify-center items-center gap-8 pt-10 text-[#FF7361] font-semibold cursor-pointer">
         <div>
           <ChevronLeftIcon /> Previous Step
         </div>

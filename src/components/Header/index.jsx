@@ -1,6 +1,8 @@
 import Image from "next/image";
-import { Button } from "@mui/material";
+import { Button, Fade, Modal } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
 
 const headerList = [
   {
@@ -25,6 +27,7 @@ const headerList = [
   },
 ];
 const Header = () => {
+  const [showNav, setShowNav] = useState(false);
   return (
     <div className="px-8 py-4 flex justify-between items-center bg-[#6C48F0] gap-4 sticky top-0 left-0 w-full z-40">
       <div className="w-1/4">
@@ -51,9 +54,47 @@ const Header = () => {
           <div className="normal-case font-semibold">Course Finder</div>
         </Button>
       </div>
-      <div className="md:hidden text-white">
+      <div
+        className="md:hidden text-white"
+        onClick={() => {
+          setShowNav(true);
+        }}
+      >
         <MenuIcon />
       </div>
+      {showNav && (
+        <Modal
+          open={showNav}
+          className="fixed top-0 left-0 w-full h-full bg-[#6C48F0] transition ease-in-out delay-150"
+        >
+          <Fade in={showNav}>
+            <div className="p-4">
+              <div className="flex justify-between items-center gap-2 py-1 text-white">
+                <Image
+                  src="/assets/logo.svg"
+                  alt="kc overseas"
+                  width={185}
+                  height={45}
+                />
+                <CloseIcon onClick={() => setShowNav(false)} />
+              </div>
+              <div className="text-white py-4 ">
+                {headerList.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={[
+                      "cursor-pointer font-semibold py-4",
+                      "border-b border-gray-200",
+                    ].join(" ")}
+                  >
+                    {item.text}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Fade>
+        </Modal>
+      )}
     </div>
   );
 };

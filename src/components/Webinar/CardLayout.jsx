@@ -26,7 +26,14 @@ const CardLayout = ({ title, subtitle, brief, icon, layout, css }) => {
           ].join(" ")}
         />
       </div>
-      <div className="px-8 text-left">
+      <div
+        className={[
+          "px-8 text-left",
+          layout === "vertical"
+            ? ""
+            : "md:flex md:justify-center md:items-start md:flex-col",
+        ].join(" ")}
+      >
         <div className="text-[#226CF5] text-[14px] pt-4">{subtitle}</div>
         <div className="text-[#0E1B2C] text-[22px] pt-3 font-semibold md:font-regular">
           {title}

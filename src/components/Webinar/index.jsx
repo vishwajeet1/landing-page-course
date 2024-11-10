@@ -45,7 +45,7 @@ const Webinar = () => {
           <CardLayout {...item} key={item.id} />
         ))}
       </div>
-      <div className="flex justify-center items-center gap-2 pt-2 text-[#FF7361] font-semibold pb-8">
+      <div className="flex justify-center items-center gap-2 pt-2 text-[#FF7361] font-semibold pb-8 cursor-pointer">
         See more
         <ChevronRightIcon />
       </div>

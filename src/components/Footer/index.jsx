@@ -3,14 +3,17 @@ import EnquireButton from "@/components/common/Button/EnquireButton";
 const Footer = () => {
   return (
     <div className="relative">
-      <div className="w-full h-[100px] bg-[#0E1B2C] rounded-t-[100%] absolute top-[-60px] left-0">
-        <img
-          src="/assets/footer/Union.png"
-          className="absolute left-[10%] top-0 transform translate-y-[-30%] z-30"
-          width={123}
-          height={131}
-        />
-      </div>
+      <img
+        src={"/assets/footer/Rectangle 1767.png"}
+        alt="footer"
+        className="w-full h-[100px] absolute top-[-60px] left-0"
+      />
+      <img
+        src="/assets/footer/Union.png"
+        className="absolute left-[10%] top-[-80px] md:top-[-60px] transform translate-y-[-30%] z-30"
+        width={123}
+        height={131}
+      />
       <div className="bg-[#0E1B2C] text-center relative z-20 pb-12">
         <div className="text-[26px] md:text-[42px] text-white font-semibold">
           Stay updated with KC Overseas
